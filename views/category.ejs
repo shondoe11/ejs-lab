@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=category%> Menu</title>
+</head>
+
+<%- include('./partials/nav') %>
+<!-- Exercise 3: Create a separate page for menu categories -->
+<body>
+    <h1><%=category%> Menu</h1>
+    <% menuItems.forEach(item=> { %>
+        <p>
+            <%=item.name%> ---- <%=item.price%>
+                    <br>
+                    <%=item.rating%>⭐
+                        <br>
+                        <%=item.details%>
+        </p>
+        <br>
+        <%})%>
+</body>
+
+</html>
